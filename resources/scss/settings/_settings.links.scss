@@ -1,0 +1,39 @@
+///------------------------------------
+//    #SETTINGS
+//------------------------------------
+
+// Globaly available variables
+
+
+
+
+
+//-------------------------
+//    #Links
+//    Global default settings
+//	  for hyperlinks
+//-------------------------
+
+
+
+
+
+ $color-links:                  $black;
+ $color-links-visited:          $black;
+ $color-links-hover:            $black;
+
+
+a {
+  color: $color-links;
+  text-decoration: none;
+
+  &:visited {
+    color: $color-links-visited;
+  }
+
+  &:hover {
+    color: $color-links-hover;
+  }
+
+
+}

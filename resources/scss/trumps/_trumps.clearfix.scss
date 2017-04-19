@@ -1,0 +1,30 @@
+///------------------------------------
+//    #TRUMPS
+//------------------------------------
+
+// Globaly available hacks or overwrits
+
+
+
+
+
+//-------------------------
+//    #Clearfix
+//-------------------------
+
+// Micro clearfix, as per: css-101.org/articles/clearfix/latest-new-clearfix-so-far.php
+// Extend the clearfix placeholder class `%clearfix` with Sass to avoid the
+// `.clearfix` class appearing over and over in your markup.
+//
+// .simple-usage {
+//    @extend .clearfix;
+// }
+
+.clearfix,
+%clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}

@@ -1,0 +1,48 @@
+///------------------------------------
+//    #TRUMPS
+//------------------------------------
+
+// Globaly available hacks or overwrits
+
+
+
+
+
+//-------------------------
+//    #Hacks
+//-------------------------
+
+
+ ////////////////////////////////////////////////////////////////////////////////
+ //                                                                            //
+ //                            WebKit Hacks                                    //
+ //                                                                            //
+ ////////////////////////////////////////////////////////////////////////////////
+
+//
+// 1. Ugly Mac OS fonts rendering and Firefox bolder rendering
+// 2. User agent stylesheet default is box-sizing: border-box
+// 3. Webkit custom input search
+//
+
+
+ html {
+   -webkit-font-smoothing: antialiased; // 1
+   -moz-osx-font-smoothing: grayscale;// 1
+ }
+
+
+ input,
+ textarea,
+ select {
+   box-sizing: inherit; // 2
+ }
+
+
+ input[type="search"] {
+   -webkit-appearance: textfield; // 3
+ }
+
+ input[type="search"]::-webkit-search-cancel-button {
+   display: none; // 3
+ }

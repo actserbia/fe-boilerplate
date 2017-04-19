@@ -1,0 +1,86 @@
+///------------------------------------
+//    #SETTINGS
+//------------------------------------
+
+// Globaly available variables
+
+
+
+
+
+//-------------------------
+//    #Typography
+//    Global default settings
+//	  for typography
+//-------------------------
+
+
+//------FONT-FACE
+// below is an example of how to include fonts
+
+// @include fontFaceExternal (Helnuboldconde, /helveticaneue-boldcond-webfont, null, null, eot woff ttf svg);
+// @include fontFace (fontello, /fontello, null, null, eot woff ttf svg);
+
+
+
+//------FONT SIZES CALCULATION
+// DO NOT CHANGE BASE FONT SIZE, ITS EASIER FOR CALCULATION
+// CHANGE FONT-SIZE USING THIS FORMULA
+// A = 10  (font size we always use, just change resolution)
+// B = 768 (resolution we are looking at in the desing)
+// X = (A / B) * 100
+
+//------DIMENSIONS
+$baseFontSize: 10; // DO NOT CHANGE THIS
+
+html {
+    $fontSizePX: $baseFontSize + 'px';
+    overflow-x: hidden;
+    font-size  : $fontSizePX;
+	//change this part
+    @include breakpoint (desktop) {
+        font-size: 0.694444444444444vw;
+    }
+    @include breakpoint (tablet) {
+        font-size: 0.9765625vw;
+    }
+    @include breakpoint (phone) {
+        font-size: 1.303780964797914vw;
+    }
+}
+body{
+    overflow-x: hidden;
+}
+
+//------FONT FAMILY VARIBALE
+
+
+$fontDefault    : Arial, Helvetica, Tahoma, sans-serif;
+//This is an example of how to set fonts
+// $baseFont       :'Open Sans', $fontDefault;
+// $Helnuboldconde : 'Helnuboldconde', $fontDefault;
+// $fontFontello   : "fontello";
+
+
+
+
+//------GLOBAL FONT SETTINGS FOR HEADERS - must be here
+body {
+    font-size: 100%;
+}
+
+h1 {
+	font-size: 3rem;
+}
+
+h2 {
+	font-size: 3rem;
+}
+
+h3 {
+	font-size: 3rem;
+}
+
+h4 {
+	font-size: 3rem;
+}

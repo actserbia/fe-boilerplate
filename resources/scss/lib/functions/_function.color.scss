@@ -1,0 +1,19 @@
+//-------------------------
+//------FUNCTION COLOR
+//  retrieve color from $colors map ie. `color(base, primary)`
+//  requires settings/settings.colors
+//-------------------------
+
+
+@function colorFunc($colorName, $colorVariant: null) {
+
+    // color variant is optional
+    @if ($colorVariant != null) {
+
+        @return map-get(map-get($colors, $colorName), $colorVariant);
+
+    } @else {
+        @return map-get($colors, $colorName);
+    }
+
+}

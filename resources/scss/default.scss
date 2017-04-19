@@ -1,0 +1,35 @@
+//------------------------------------------------------------------------------
+//   Import all styles
+//-----------------------------------------------------------------------------
+
+//------CORE
+// Core files prepare DOM by making HTML elements consistent across browsers
+// and removing built-in browser styling.
+@import 'core/all';
+
+//------MIXINS and functions
+@import 'lib/all';
+
+//------SETTINGS FOR PROJECT
+
+//------variable, breakpoints, typo
+@import
+    'settings/settings.breakpoints',
+    'settings/settings.colors',
+    'settings/settings.wrappers',
+    'settings/settings.links',
+    'settings/settings.paths',
+    'settings/settings.typography',
+    'settings/settings.global';
+
+//------BLOCKS
+//------COMPONENTS
+//------PAGES
+
+
+//------TRUMPS
+@import
+    'trumps/trumps.clearfix',
+    'trumps/trumps.hacks',
+    'trumps/trumps.ie',
+    'trumps/trumps.print'; 
