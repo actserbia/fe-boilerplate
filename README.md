@@ -1,16 +1,16 @@
-## Fe-boilerplate
+### Fe-boilerplate
 
-# Fe-boilerplate is made as a base for standalone projects, not depending of vagrant sceleton.
-# It consists minification and concatenation for SCSS and JS.
-# Public folder is a destination folder for production files.
+- Fe-boilerplate is made as a base for standalone projects, not depending of vagrant sceleton.
+- It consists minification and concatenation for SCSS and JS.
+- Public folder is a destination folder for production files.
 
-## Dev/Build Setup
+### Dev/Build Setup
 
-# git clone
-# cd to repository
-# npm install
-# gulp
+- git clone
+- cd to repository
+- npm install
+- gulp
 
-## Credits
+### Credits
 
-# Webedia Belgrade developers
+- Webedia Belgrade developers
