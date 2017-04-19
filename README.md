@@ -10,7 +10,3 @@
 - cd to repository
 - npm install
 - gulp
-
-### Credits
-
-- Webedia Belgrade developers
