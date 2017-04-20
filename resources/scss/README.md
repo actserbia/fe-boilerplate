@@ -25,7 +25,7 @@
 * Box-sizing..........Build CSS layouts easier.
 * Normalize...........normalize.css v4.1.1.
 
-###### Please see [core/readme.md] (core) for a full table of contents and more detailed info.
+###### Please see [core/readme.md] for a full table of contents and more detailed info.
 
 
 
@@ -37,7 +37,7 @@
 * Functions............Globally-available functions.
 * Mixins...............Globally-available mixins.
 
-###### Please see [lib/readme.md] (lib) for a full table of contents and more detailed info.
+###### Please see [lib/readme.md] for a full table of contents and more detailed info.
 
 
 
@@ -49,7 +49,7 @@
 * Can be included partially.
 * Project specific globally-available variables
 
-###### Please see [settings/readme.md] (settings) for a full table of contents and more detailed info.
+###### Please see [settings/readme.md] for a full table of contents and more detailed info.
 
 
 
@@ -61,7 +61,7 @@
 * Can be included partially.
 * Wrapped with div class named b-nameoftheblock.
 
-###### Please see [blocks/readme.md] (blocks) for a full table of contents and more detailed info.
+###### Please see [blocks/readme.md] for a full table of contents and more detailed info.
 
 
 
@@ -73,7 +73,7 @@
 * Can be included partially.
 * Concrete, specific piece of UI.
 
-###### Please see [components/readme.md] (components) for a full table of contents and more detailed info.
+###### Please see [components/readme.md] for a full table of contents and more detailed info.
 
 
 
@@ -85,7 +85,7 @@
 * Can be included partially.
 * Applies only to certain type of page or pages.
 
-###### Please see [pages/readme.md] (pages) for a full table of contents and more detailed info.
+###### Please see [pages/readme.md] for a full table of contents and more detailed info.
 
 
 
@@ -97,4 +97,4 @@
 * Can be included partially.
 * Hack code or overwrite everything above
 
-###### Please see [trumps/readme.md] (trumps) for a full table of contents and more detailed info.
+###### Please see [trumps/readme.md] for a full table of contents and more detailed info.
