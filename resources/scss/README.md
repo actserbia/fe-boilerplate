@@ -1,6 +1,6 @@
 ### Fe-boilerplate
 
-- Fe-boilerplate is made as a base for standalone projects, not depending of vagrant skeleton.
+- Fe-boilerplate is made as a base for standalone projects.
 - It consists minification and concatenation for SCSS and JS.
 - Public folder is a destination folder for production files.
 
