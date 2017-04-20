@@ -25,6 +25,7 @@ gulp.src('./resources/*.ext')
     .pipe(coffee())
     .pipe(gulp.dest('./html'));
 
+
 gulp.task('sass', function () {
     gulp.src('./resources/scss/**/*.scss')
     .pipe(sourcemaps.init())

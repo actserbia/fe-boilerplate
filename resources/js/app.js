@@ -1,4 +1,5 @@
-import $ from "jquery";
+var jQuery = require('jquery');
+
 import {test} from './test/test.js';
 
 var SWT = (function($) {
