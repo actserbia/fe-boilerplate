@@ -25,7 +25,7 @@
 * Box-sizing..........Build CSS layouts easier.
 * Normalize...........normalize.css v4.1.1.
 
-###### Please see [core/readme.md] for a full table of contents and more detailed info.
+###### Please see [a link](https://github.com/diwaneemedia/fe-boilerplate/blob/master/resources/scss/core/README.md)[core/readme.md] for a full table of contents and more detailed info.
 
 
 
