@@ -5,7 +5,8 @@ Info
 
     - Core files must be included and must come first.
     - Core files contain very high-level, far reaching styles.
-    - Core files help us to make consistence across browsers and set blank canvas.
+    - Core files help us to make consistence across browsers and set
+      blank canvas.
     - Core files are the first files that will be compiled in css.
 
 
