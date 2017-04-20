@@ -8,6 +8,9 @@ var plumber = require('gulp-plumber');
 var coffee = require('gulp-coffee');
 var notify = require("gulp-notify");
 var livereload = require('gulp-livereload');
+var sourcemaps = require('gulp-sourcemaps');
+
+
 livereload({ start: true })
 
 gulp.src("./src/test.ext")
@@ -20,11 +23,13 @@ gulp.src('./resources/*.ext')
 
 gulp.task('sass', function () {
     gulp.src('./resources/scss/**/*.scss')
+    .pipe(sourcemaps.init())
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(sass())
     .pipe(cssmin())
     .pipe(plumber.stop())
     .pipe(rename({suffix: '.min'}))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('./public/css/'))
     .pipe(livereload())
     .pipe(notify('Sass compiled'));

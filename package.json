@@ -20,6 +20,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-requirejs": "^1.0.0-rc2",
     "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0",
     "gulp-uglify": "^2.1.2"
   }
 }
