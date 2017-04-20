@@ -1,4 +1,9 @@
 var gulp = require('gulp');
+var source = require('vinyl-source-stream');
+var buffer = require('vinyl-buffer');
+var browserify = require('browserify');
+var watchify = require('watchify');
+var babel = require('babelify');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var rename = require('gulp-rename');
@@ -9,7 +14,6 @@ var coffee = require('gulp-coffee');
 var notify = require("gulp-notify");
 var livereload = require('gulp-livereload');
 var sourcemaps = require('gulp-sourcemaps');
-
 
 livereload({ start: true })
 
@@ -35,21 +39,41 @@ gulp.task('sass', function () {
     .pipe(notify('Sass compiled'));
 });
 
-gulp.task('scripts', function() {
-    return gulp.src('./resources/js/**/*.js')
-    .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
-    .pipe(concat('main.min.js'))
-    .pipe(uglify())
-    .pipe(plumber.stop())
-    .pipe(gulp.dest('./public/js/'))
-    .pipe(livereload())
-    .pipe(notify('Javascript compiled'));
-});
+browserify().transform("babelify", {presets: ["es2015"]});
+function compile(watch) {
 
+  livereload.listen();
+  gulp.watch('./resources/scss/**/*.scss', ['sass'])
+  var bundler = watchify(browserify('./resources/js/main.js', { debug: true }).transform(babel));
+
+  function rebundle() {
+    bundler.bundle()
+      .on('error', function(err) { console.error(err); this.emit('end'); })
+      .pipe(source('main.min.js'))
+      .pipe(buffer())
+      .pipe(sourcemaps.init({ loadMaps: true }))
+      .pipe(sourcemaps.write('./'))
+      .pipe(gulp.dest('./public/js'))
+      .pipe(livereload())
+      .pipe(notify('Javascript compiled'));
+  }
+
+  if (watch) {
+    bundler.on('update', function() {
+      rebundle();
+    });
+  }
+
+  rebundle();
+}
+
+function watch() {
+  return compile(true);
+};
+
+gulp.task('build', function() { return compile(); });
 gulp.task('watch', function() {
-    livereload.listen();
-    gulp.watch('./resources/scss/**/*.scss', ['sass'])
-    gulp.watch('./resources/js/**/*.js', ['scripts'])
+   return watch();
 });
 
-gulp.task("default", ['watch']);
+gulp.task('default', ['watch']);

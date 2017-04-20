@@ -1,3 +1,6 @@
+import $ from "jquery";
+import {test} from './test/test.js';
+
 var SWT = (function($) {
     // Define your functions here
 

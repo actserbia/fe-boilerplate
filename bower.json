@@ -1,0 +1,23 @@
+{
+  "name": "fe-boilerplate",
+  "description": "starter pack",
+  "main": "index.js",
+  "authors": [
+    "diwanee"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/diwaneemedia/fe-boilerplate",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs": "^2.3.3"
+  },
+  "devDependencies": {
+    "requirejs": "^2.3.3"
+  }
+}
