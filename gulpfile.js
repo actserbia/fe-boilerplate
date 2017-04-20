@@ -7,6 +7,8 @@ var cssmin = require('gulp-cssmin');
 var plumber = require('gulp-plumber');
 var coffee = require('gulp-coffee');
 var notify = require("gulp-notify");
+var livereload = require('gulp-livereload');
+livereload({ start: true })
 
 gulp.src("./src/test.ext")
   .pipe(notify("Hello Gulp!"));
@@ -24,6 +26,7 @@ gulp.task('sass', function () {
     .pipe(plumber.stop())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('./public/css/'))
+    .pipe(livereload())
     .pipe(notify('Sass compiled'));
 });
 
@@ -34,10 +37,12 @@ gulp.task('scripts', function() {
     .pipe(uglify())
     .pipe(plumber.stop())
     .pipe(gulp.dest('./public/js/'))
+    .pipe(livereload())
     .pipe(notify('Javascript compiled'));
 });
 
 gulp.task('watch', function() {
+    livereload.listen();
     gulp.watch('./resources/scss/**/*.scss', ['sass'])
     gulp.watch('./resources/js/**/*.js', ['scripts'])
 });

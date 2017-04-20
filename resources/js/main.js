@@ -1,5 +1,4 @@
 var SWT = (function($) {
-
     // Define your functions here
 
     function ready() {
