@@ -23,7 +23,7 @@ gulp.src("./src/test.ext")
 gulp.src('./resources/*.ext')
     .pipe(plumber())
     .pipe(coffee())
-    .pipe(gulp.dest('./public'));
+    .pipe(gulp.dest('./html'));
 
 gulp.task('sass', function () {
     gulp.src('./resources/scss/**/*.scss')
@@ -34,26 +34,27 @@ gulp.task('sass', function () {
     .pipe(plumber.stop())
     .pipe(rename({suffix: '.min'}))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./public/css/'))
+    .pipe(gulp.dest('./html/css/'))
     .pipe(livereload())
     .pipe(notify('Sass compiled'));
 });
 
 browserify().transform("babelify", {presets: ["es2015"]});
+
 function compile(watch) {
 
   livereload.listen();
   gulp.watch('./resources/scss/**/*.scss', ['sass'])
-  var bundler = watchify(browserify('./resources/js/main.js', { debug: true }).transform(babel));
+  var bundler = watchify(browserify('./resources/js/app.js', { debug: true }).transform(babel));
 
   function rebundle() {
     bundler.bundle()
       .on('error', function(err) { console.error(err); this.emit('end'); })
-      .pipe(source('main.min.js'))
+      .pipe(source('app.js'))
       .pipe(buffer())
       .pipe(sourcemaps.init({ loadMaps: true }))
       .pipe(sourcemaps.write('./'))
-      .pipe(gulp.dest('./public/js'))
+      .pipe(gulp.dest('./html/js'))
       .pipe(livereload())
       .pipe(notify('Javascript compiled'));
   }
