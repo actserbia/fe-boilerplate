@@ -37,7 +37,7 @@
 * Functions............Globally-available functions.
 * Mixins...............Globally-available mixins.
 
-###### Please see [lib/readme.md] for a full table of contents and more detailed info.
+###### Please see [lib/readme.md](lib) for a full table of contents and more detailed info.
 
 
 
