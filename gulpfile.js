@@ -44,8 +44,6 @@ browserify().transform("babelify", {presets: ["es2015"]});
 
 function compile(watch) {
 
-  livereload.listen();
-  gulp.watch('./resources/scss/**/*.scss', ['sass'])
   var bundler = watchify(browserify('./resources/js/app.js', { debug: true }).transform(babel));
 
   function rebundle() {
@@ -76,6 +74,8 @@ function watch() {
 
 gulp.task('build', function() { return compile(); });
 gulp.task('watch', function() {
+   livereload.listen();
+   gulp.watch('./resources/scss/**/*.scss', ['sass'])
    return watch();
 });
 

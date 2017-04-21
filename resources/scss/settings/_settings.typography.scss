@@ -39,7 +39,7 @@ html {
     font-size  : $fontSizePX;
 	//change this part
     @include breakpoint (desktop) {
-        font-size: 0.694444444444444vw;
+        font-size: 0.625vw;
     }
     @include breakpoint (tablet) {
         font-size: 0.9765625vw;
