@@ -15,11 +15,6 @@ var notify = require("gulp-notify");
 var livereload = require('gulp-livereload');
 var sourcemaps = require('gulp-sourcemaps');
 var fontgen = require('gulp-fontgen');
-var growl = require('gulp-notify-growl');
-
-var growlNotifier = growl({
-  hostname : '192.168.0.10' // IP or Hostname to notify, default to localhost
-});
 
 livereload({ start: true })
 
